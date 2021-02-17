@@ -6,13 +6,14 @@
     <title>Golden Boots</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="index.js"></script>
-    <script src="team.js"></script>
-    <script src="player.js"></script>
+    <script src="src/team.js"></script>
+    <script src="src/player.js"></script>
 </head>
 <body>
     <div class="test">
         <main style="opacity: 1;" class="">
-            <div class="static">
+            <div class="static" id="headerid">
+                <p style="opacity: 1; display: block; transform: translateX(0px) translateY(0px);" class="js-subheading" ></p>
             </div>
             <div class="js-stage stage texture">
                 <div style="opacity: 1; transform: translateZ(-200px) translateY(0px);" class="js-world world">
@@ -38,11 +39,13 @@
                         <div class="field__side field__side--left"></div>
                         <div class="field__side field__side--right"></div>
                         <div class="field__side field__side--back"></div>
+                       
+                       
+                          </div>
                     </div>
                 </div>
-        
             </div>
             </main>
-        </div>
+      </div>
 </body>
 </html>
