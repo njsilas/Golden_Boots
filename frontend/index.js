@@ -13,4 +13,19 @@ function fetchTeams (){
         }
 
     })
+function fetchPlayers (){
+    fetch(`${BASE_URL}/players`)
+    .then(resp => resp.json())
+    .then(players => {
+        for (const player of players){
+            console.log(player)
+            let p = new Player(player.id, name.id, nat.id, pos.id)
+            p.renderPLayer();
+        }
+    })
+}
+// add players to database
+// connect player to team
+// add containers to overlap
+
 }

@@ -13,4 +13,7 @@ class Team {
         </ul>
         `
     }
+    // add data about team
+
+    //allow chaning of teams to seeded data
 }
