@@ -6,14 +6,20 @@ class Player {
         this.pos = pos
         this.team_id = team_id
     }
-    renderTeam() {
-        let teamDiv = document.getElementById('headerid')
-        teamDiv.innerHTML += 
+    renderPlayer() {
+        let playerDiv = document.getElementById("table-body")
+        let nameDiv = document.getElementById("pname")
+        let natDiv = document.getElementById("pnat")
+        let posDiv = document.getElementById("ppos")
+        playerDiv.innerHTML += 
         `
-        <ul>
-        <h1>Team: ${this.name}</h1>
-        </ul>
+       <td>${this.name}</td>
+       
+        <td>${this.nat}</td>
+       
+           <td>${this.pos}</td>
         `
+
     }
 
     // add form to page

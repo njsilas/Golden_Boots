@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () =>{
-    buildForm()
+    buildForm();
     fetchTeams();
-    
+    fetchPlayers ();
 })
 const BASE_URL = "http://127.0.0.1:3000"
 function buildForm() {
@@ -16,7 +16,7 @@ function buildForm() {
         </form>
         `
 }
-function fetchTeams (){
+    function fetchTeams (){
     fetch(` ${BASE_URL}/teams`)
     .then(resp => resp.json())
     .then(teams => {
@@ -26,10 +26,18 @@ function fetchTeams (){
            t.renderTeam();
         }
 
-    })
+     })
+   }
+    function fetchPlayers (){
+    fetch(` ${BASE_URL}/players`)
+    .then(resp => resp.json())
+    .then(players => {
+        for (const player of players){
+             console.log(player)
+                let p = new Player(player.id, player.name, player.pos, player.nat)
+            p.renderPlayer();
+        }
+    
+     })
+    }
 
-// add players to database
-// connect player to team
-// add containers to overlap
-
-}
