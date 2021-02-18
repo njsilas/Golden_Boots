@@ -8,18 +8,13 @@ class Player {
     }
     renderPlayer() {
         let playerDiv = document.getElementById("table-body")
-        let nameDiv = document.getElementById("pname")
-        let natDiv = document.getElementById("pnat")
-        let posDiv = document.getElementById("ppos")
         playerDiv.innerHTML += 
         `
        <td>${this.name}</td>
-       
-        <td>${this.nat}</td>
-       
-           <td>${this.pos}</td>
+        <td>${this.nat}</td>       
+        <td>${this.pos}</td>
+        <td><button  class="delete-bttn" data-id=${this.id} onclick="deletePlayer()">Delete</button></td>
         `
-
     }
 
     // add form to page
