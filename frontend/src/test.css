@@ -1,24 +1,4 @@
-* {
-    box-sizing: border-box;
-  }
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-    font-size: 62.5%;
-    padding: 0;
-    margin: 0;
-  }
-.static {
-    top: 0;
-    left: 0;
-    width: 100%;
-    color: #fff;
-    text-align: center;
-    padding: 0;
-    z-index: 3;
-  }
-  .static h1 {
+.static h1 {
     margin: 50px 0 15px;
     font-size: 40px;
     font-weight: 700;
@@ -26,20 +6,11 @@
     line-height: 42px;
     letter-spacing: -3px;
     font-family: montserrat;
-  }
-  .static p {
-    font-weight: 300;
-    opacity: 0.4;
-    margin: 0 0 20px;
-    font-size: 16px;
-    color: #7f98d3;
-  }
-  .box div {
+}
+.div1 {
     width: 300px;
-    height: 100px;
+    height: 100px;  
     padding: 50px;
-    border: 1px #7f98d3;
+    border: 1px solid red;
     box-sizing: border-box;
-    position: absolute;
-    background: #7f98d3;
   }

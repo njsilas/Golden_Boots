@@ -3,15 +3,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test</title>
-    <link rel="stylesheet" type="text/css" href="test.html">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="index.js"></script>
     <script src="src/team.js"></script>
     <script src="src/player.js"></script>
+   
 </head>
 <body>
     <div class ="static">
       <div class="static h1" id="headerid"></div>
+      <div id="formid">
+       
+      </div>
+
+      <div class="margin flex">
+        <h4 class='center'>Your Team</h4>
+        <table class='margin' border="1">
+          <thead class='blue'>
+            <tr class='padding'>
+              <th class='padding center'>Name</th>
+                <ul>
+                    <li id="pname"></li>
+                </ul>
+              <th class='padding center'>Position</th>
+              <ul>
+                <li id="ppos"></li>
+            </ul>
+              <th class='padding center'>Nationality</th>
+              <ul>
+                <li id="pnat"></li>
+            </ul>
+              <th class='padding center'>Remove Player</th>
+              <ul>
+                  <li id="pedit"></li>
+              </ul>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div class="box div" id="centerbox">is this working?</div>
 </body>
 </html>
