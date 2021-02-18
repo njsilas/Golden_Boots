@@ -14,6 +14,9 @@ class Team {
         `
     }
     // add data about team
-
+  
     //allow chaning of teams to seeded data
+    renderLastTeam() {
+        return this.id
+    }
 }
