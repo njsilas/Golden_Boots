@@ -7,16 +7,16 @@ class Player {
         this.team_id = team_id
     }
     renderPlayer() {
-        let playerDiv = document.getElementById("circle2")
+        let playerDiv = document.getElementById("table-body")
         playerDiv.innerHTML += 
         `
-       <h2>${this.name}</h2>
-        <h4>${this.nat}</h4>       
-        <h4>${this.pos}<h4>
-        <button  class="delete-bttn" data-id=${this.id} onclick="deletePlayer()">Delete</button>
+        <td>${this.name}</td>
+        <td>${this.nat}</td>
+        <td>${this.pos}</td>
+        <td><button  class="delete-bttn" data-id=${this.id} onclick="deletePlayer()">Delete</button></td>
         `
     }
-   
+    
 
     // add form to page
     

@@ -18,6 +18,9 @@ const BASE_URL = "http://127.0.0.1:3000"
         playersForm.addEventListener("submit", playerSubmit)
 
   }
+  function newTeam() {
+      
+  }
     function playerSubmit() {
         event.preventDefault() 
         let name = document.getElementById("pname")
