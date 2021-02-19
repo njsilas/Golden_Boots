@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", () =>{
 })
 const BASE_URL = "http://127.0.0.1:3000"
     function buildForm() {
-      let playersForm = document.getElementById("formid")
+      let playersForm = document.getElementById("headerid")
         playersForm.innerHTML +=  
         `
-        <form>
+        <form id="pform" >
           <input type="name" id="pname" name="name" placeholder="Name" value="">
           <input type="pos" name="pos"id="ppos" placeholder="Position" value="">
           <input type="nat" name="nat" id="pnat" placeholder="Nationality" value="">
