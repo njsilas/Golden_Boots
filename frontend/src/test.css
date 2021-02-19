@@ -1,16 +1,44 @@
-.static h1 {
-    margin: 50px 0 15px;
-    font-size: 40px;
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 42px;
-    letter-spacing: -3px;
-    font-family: montserrat;
-}
-.div1 {
-    width: 300px;
-    height: 100px;  
-    padding: 50px;
-    border: 1px solid red;
-    box-sizing: border-box;
+/*Downloaded from https://www.codeseek.co/samtrion/svg-soccer-field-vKxRpg */
+svg {
+    width: 100%;
+  }
+  svg .turf {
+    fill: #53c653;
+  }
+  svg .cell-free {
+    fill: #7F7C5D;
+  }
+  svg .cell-reserved, svg .cell-free:hover {
+    fill: url(#striped);
+  }
+  svg .cell-sold {
+    fill: transparent;
+  }
+  svg .stripe {
+    stroke: #7F7C5D;
+    stroke-width: 1;
+  }
+  svg .line {
+    stroke: #FFFFFF;
+    stroke-width: 1.2;
+    fill: none;
+  }
+  svg .curve {
+    stroke: #FFFFFF;
+    stroke-width: 1.2;
+    fill: none;
+  }
+  svg .dot {
+    stroke: #FFFFFF;
+    fill: #FFFFFF;
+    r: 1.5;
+  }
+  svg .goal {
+    stroke: #FFFFFF;
+    stroke-width: 0.75;
+    fill: url(#goal);
+  }
+  svg .goal-stripe {
+    stroke: #FFFFFF;
+    stroke-width: 1;
   }
