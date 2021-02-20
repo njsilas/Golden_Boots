@@ -4,15 +4,19 @@ body {
 
 .ptxt {
   text-align: center;
-  font-size: 12px;
+  font-size: 16px;
+  color: #DAA520;
+  font-weight: 550;
 }
 .ph2 {
   text-align: center;
   font-size: 22px;
+  color: #DAA520;
+  font-weight: 550;
 }
 #circleRB {
   border-radius: 25%;
-  border-color: #FFD700;
+  border-color: #DAA520;
   
   width: 8vw;
   height: 8vh;
