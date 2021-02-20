@@ -21,7 +21,19 @@ function buildPlayerForm() {
         <h1 id= "teamname"> name goes here </h1>
         <form id="pform" >
           <input type="name" id="pname" name="name" placeholder="Name" value="">
-          <input type="pos" name="pos"id="ppos" placeholder="Position" value="">
+          <select name="pos" id="ppos">
+            <option value="GK">GK</option>
+            <option value="RB">RB</option>
+            <option value="RCB">RCB</option>
+            <option value="LCB">LCB</option>
+            <option value="LB">LB</option>
+            <option value="LM-LW">LM-LW</option>
+            <option value="LCM">LCM</option>
+            <option value="RCM">RCM</option>
+            <option value="RM-RW">RM-RW</option>
+            <option value="LF-ST">LF-ST</option>
+            <option value="RF-ST">RF-ST</option>
+           
         <input type="nat" name="nat" id="pnat" placeholder="Nationality" value="">
           <input type="submit" id="playersubmit" value="Add player">
         </form>
@@ -64,14 +76,13 @@ function buildPlayerForm() {
     .then(team => {
         let t = new Team(team.name, team.id)
        currentTeamId = t.id
-        console.log(currentTeamId)
         t.renderTeam()
         
 
 })
 
   }
-    function playerSubmit() {
+    function playerSubmit(event) {
         event.preventDefault() 
         let name = document.getElementById("pname")
         let pos = document.getElementById("ppos")
@@ -79,8 +90,8 @@ function buildPlayerForm() {
         
         let player = {
             name: name.value,
-            pos: pos.value,
             nat: nat.value,
+            pos: pos.value,
             team_id: currentTeamId
         }
         fetch(`${BASE_URL}/players`, {
@@ -93,7 +104,7 @@ function buildPlayerForm() {
         })
         .then(resp => resp.json())
         .then(player => {
-            let p = new Player(player.team_id, player.name, player.pos, player.nat)
+            let p = new Player(player.name, player.nat, player.pos, player.team_id)
            p.renderPlayer();
     })
     }
