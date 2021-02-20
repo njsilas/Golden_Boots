@@ -1,25 +1,75 @@
 document.addEventListener("DOMContentLoaded", () =>{
-    buildForm();
-    fetchTeams();
-    fetchPlayers ();
+  buildTeamPrompt()
+  buildPlayerForm()
 })
 const BASE_URL = "http://127.0.0.1:3000"
-    function buildForm() {
-      let playersForm = document.getElementById("headerid")
-        playersForm.innerHTML +=  
+let currentTeamId;
+
+function buildTeamPrompt () {
+    let teamname;
+    setTimeout(() => {
+         teamname = prompt("Please Create a Team First:")
+         teamSubmit(teamname)
+    }, 500)
+    
+}
+function buildPlayerForm() {
+    let playersForm = document.getElementById("formspot")
+     playersForm.innerHTML +=  
         `
+        <div class="top">
+        <h1 id= "teamname"> name goes here </h1>
         <form id="pform" >
           <input type="name" id="pname" name="name" placeholder="Name" value="">
           <input type="pos" name="pos"id="ppos" placeholder="Position" value="">
-          <input type="nat" name="nat" id="pnat" placeholder="Nationality" value="">
+        <input type="nat" name="nat" id="pnat" placeholder="Nationality" value="">
           <input type="submit" id="playersubmit" value="Add player">
         </form>
+       </div>
         `
-        playersForm.addEventListener("submit", playerSubmit)
+       playersForm.addEventListener("submit", playerSubmit)
 
   }
-  function newTeam() {
+  //function buildTeamForm () {
       
+    
+    //let teamForm = document.getElementById("formspot")
+    //teamForm.innerHTML +=
+   // `
+   // <h1>Please Input Team Name</h1>
+       // <form id="firstTeam">
+        //<input type="name" id="teamname" name="name" placeholder="Team name goes here" value="">
+       // <input type="submit" name="teamsubmit" id="teamsubmit" value="Create Team">
+       // </form>
+   // `
+    //;
+    
+        //teamForm.addEventListener("submit", teamSubmit)
+  //}
+  function teamSubmit(teamname) {
+
+      let team = {
+          name: teamname
+        
+      }
+      fetch(`${BASE_URL}/teams`, {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+        body: JSON.stringify(team)
+    })
+    .then(resp => resp.json())
+    .then(team => {
+        let t = new Team(team.name, team.id)
+       currentTeamId = t.id
+        console.log(currentTeamId)
+        t.renderTeam()
+        
+
+})
+
   }
     function playerSubmit() {
         event.preventDefault() 
@@ -31,7 +81,7 @@ const BASE_URL = "http://127.0.0.1:3000"
             name: name.value,
             pos: pos.value,
             nat: nat.value,
-            team_id: getlastTeam()
+            team_id: currentTeamId
         }
         fetch(`${BASE_URL}/players`, {
             method: "POST",

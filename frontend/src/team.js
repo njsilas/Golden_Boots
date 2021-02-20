@@ -1,16 +1,17 @@
 class Team {
-    constructor(id, name) {
+    constructor(name, id) {
         this.name = name;
         this.id = id
     }
     // render team instance method
     renderTeam() {
-        let teamDiv = document.getElementById('headerid')
-        teamDiv.innerHTML += 
+        let teamDiv = document.getElementById('teamname')
+       
+        teamDiv.innerHTML =
+       
         `
-        <ul>
-        <h1>Team: ${this.name}</h1>
-        </ul>
+    Team: ${this.name}
+       
         `
     }
     // add data about team

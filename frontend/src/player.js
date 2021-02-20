@@ -7,13 +7,13 @@ class Player {
         this.team_id = team_id
     }
     renderPlayer() {
-        let playerDiv = document.getElementById("table-body")
+        let playerDiv = document.getElementById(`circle${this.pos}`)
         playerDiv.innerHTML += 
         `
-        <td>${this.name}</td>
-        <td>${this.nat}</td>
-        <td>${this.pos}</td>
-        <td><button  class="delete-bttn" data-id=${this.id} onclick="deletePlayer()">Delete</button></td>
+        ${this.name}
+        ${this.nat}
+        ${this.pos}
+       
         `
     }
     
