@@ -4,118 +4,147 @@ body {
 
 .ptxt {
   text-align: center;
-  font-size: 8px;
+  font-size: 12px;
+}
+.ph2 {
+  text-align: center;
+  font-size: 22px;
 }
 #circleRB {
-  border-radius: 50%;
+  border-radius: 25%;
+  border-color: #FFD700;
+  
   width: 8vw;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: relative;
-  right: -150px;
-  top: -80px;
+  position: fixed;
+  right: 700px;
+  top: 570px;
 }
 #circleLB {
-  border-radius: 50%;
+  border-radius: 25%;
   width: 8vw;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: relative;
-  right: -150px;
-  top: 380px;
+  position: fixed;
+  right: 700px;
+  top: 140px;
 }
 #circleRCB {
-  border-radius: 50%;
+  border-radius: 25%;
   width: 8vw;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: relative;
-  right: -115px;
-  top: -35px;
+  position: fixed;
+  right: 790px;
+  top: 252px;
 }
 #circleLCB{
-  border-radius: 50%;
+  border-radius: 25%;
   width: 8vw;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: relative;
-  right: -115px;
-  top: 50px;
+  position: fixed;
+  right: 790px;
+  top: 432px;
 }
 #circleLM-LW {
-  border-radius: 50%;
+  border-radius: 25%;
   width: 8vw;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
+  right: 450px;
+  top: 140px;
 }
 #circleRM-RW{
-  border-radius: 50%;
+  border-radius: 25%;
   width: 8vw;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
+  right: 450px;
+  top: 570px;
 }
 #circleRCM {
-  border-radius: 50%;
+  border-radius: 25%;
   width: 8vw;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
+  right: 570px;
+  top: 244px;
 }
 #circleLCM {
-  border-radius: 50%;
+  border-radius: 25%;
   width: 8vw;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
+  right: 570px;
+  top: 442px;
 }
 #circleLF-ST {
-  border-radius: 50%;
+  border-radius: 25%;
   width: 8vw;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
+  right: 280px;
+  top: 432px;
+
 }
 #circleRF-ST {
-  border-radius: 50%;
+  border-radius: 25%;
   width: 8vw;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
+  right: 280px;
+  top: 252px;
 }
 #circleGK {
-  border-radius: 50%;
+  border-radius: 25%;
   width: 8vw;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
+  right: 890px;
+  top: 342px;
+  z-index: 999;
 }
 #circle {
   border-radius: 50%;
@@ -140,7 +169,7 @@ body {
   position: fixed;
   top: -10px;
   left: 56px;
-  z-index: 999;
+  z-index: 998;
   width: 100%;
   height: 23px;
 }
