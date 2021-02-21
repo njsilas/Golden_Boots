@@ -10,19 +10,21 @@ class Player {
     }
     renderPlayer() {
         let playerDiv = document.getElementById(`circle${this.pos}`)
-        
        
+       console.log(playerDiv)
         playerDiv.innerHTML = 
         `
-       <p class="ptxt">${this.name}<br>
+     
+        
+       <p class="ptxt" data-id="${this.id}">${this.name}<br>
         ${this.nat}<br>
         ${this.pos}</p>
        
         `
-        playerDiv.addEventListener("click", deletePlayer(this.id))
+         playerDiv.addEventListener("click", deletePlayer)
+        
     }
-    
-
+      
     // add form to page
     
     // send player data to database

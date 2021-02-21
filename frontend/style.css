@@ -1,3 +1,5 @@
+
+
 body {
   background-color: #fff;
   
@@ -25,9 +27,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: fixed;
-  right: 660px;
-  top: 570px;
+  position: absolute;
+  right: 580px;
+  top: 460px;
 }
 #circleLB {
   border-radius: 25%;
@@ -38,9 +40,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: fixed;
-  right: 660px;
-  top: 140px;
+  position: absolute;
+  right: 580px;
+  top: 25px;
 }
 #circleRCB {
   border-radius: 25%;
@@ -51,9 +53,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: fixed;
-  right: 750px;
-  top: 252px;
+  position: absolute;
+  right: 640px;
+  top: 320px;
 }
 #circleLCB{
   border-radius: 25%;
@@ -64,9 +66,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: absolute;
+  right: 640px;
+  top: 150px;
+}
+.placementform{
   position: fixed;
-  right: 750px;
-  top: 432px;
 }
 #circleLM-LW {
   border-radius: 25%;
@@ -77,9 +82,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: fixed;
-  right: 410px;
-  top: 140px;
+  position: absolute;
+  right: 335px;
+  top: 30px;
 }
 #circleRM-RW{
   border-radius: 25%;
@@ -90,9 +95,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: fixed;
-  right: 410px;
-  top: 570px;
+  position: absolute;
+  right: 335px;
+  top: 440px;
 }
 #circleRCM {
   border-radius: 25%;
@@ -103,9 +108,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: fixed;
-  right: 530px;
-  top: 244px;
+  position: absolute;
+  right: 455px;
+  top: 350px;
 }
 #circleLCM {
   border-radius: 25%;
@@ -116,9 +121,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: fixed;
-  right: 530px;
-  top: 442px;
+  position: absolute;
+  right:  455px;
+  top: 120px;
 }
 #circleLF-ST {
   border-radius: 25%;
@@ -129,9 +134,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: fixed;
-  right: 240px;
-  top: 432px;
+  position: absolute;
+  right: 195px;
+  top: 135px;
 
 }
 #circleRF-ST {
@@ -143,9 +148,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: fixed;
-  right: 240px;
-  top: 252px;
+  position: absolute;
+  right: 195px;
+  top: 290px;
 }
 #circleGK {
   border-radius: 25%;
@@ -156,9 +161,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: fixed;
-  right: 850px;
-  top: 342px;
+  position: absolute;
+  right: 750px;
+  top: 242px;
   z-index: 999;
 }
 #circle {
@@ -191,6 +196,8 @@ body {
 .container {
   width: 850px;
   height: 550px;
+  min-width: 850px;
+  min-height: 550px;
   z-index: 1;
   margin: 50px auto;
   background-color: #539A46;
