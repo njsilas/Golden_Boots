@@ -137,7 +137,7 @@ function buildPlayerForm() {
         
         let playerId = parseInt(event.target.dataset.id)
         //= parseInt(event.target.dataset.id)
-        console.log(this)
+    
 
        
         if (window.confirm("Are you sure you want to delete them?")) {
@@ -148,7 +148,7 @@ function buildPlayerForm() {
         
             
             this.removeEventListener("click", deletePlayer)
-            debugger
+            this.innerHTML = ``
         
         } 
         }
