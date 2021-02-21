@@ -1,5 +1,6 @@
 body {
   background-color: #fff;
+  
 }
 
 .ptxt {
@@ -17,7 +18,7 @@ body {
 #circleRB {
   border-radius: 25%;
   border-color: #DAA520;
-  
+  cursor: pointer;
   width: 8vw;
   height: 8vh;
   background-color: #B7B7B7;
@@ -25,128 +26,138 @@ body {
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  right: 700px;
+  right: 660px;
   top: 570px;
 }
 #circleLB {
   border-radius: 25%;
   width: 8vw;
+  cursor: pointer;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  right: 700px;
+  right: 660px;
   top: 140px;
 }
 #circleRCB {
   border-radius: 25%;
   width: 8vw;
+  cursor: pointer;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  right: 790px;
+  right: 750px;
   top: 252px;
 }
 #circleLCB{
   border-radius: 25%;
   width: 8vw;
+  cursor: pointer;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  right: 790px;
+  right: 750px;
   top: 432px;
 }
 #circleLM-LW {
   border-radius: 25%;
   width: 8vw;
+  cursor: pointer;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  right: 450px;
+  right: 410px;
   top: 140px;
 }
 #circleRM-RW{
   border-radius: 25%;
   width: 8vw;
+  cursor: pointer;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  right: 450px;
+  right: 410px;
   top: 570px;
 }
 #circleRCM {
   border-radius: 25%;
   width: 8vw;
+  cursor: pointer;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  right: 570px;
+  right: 530px;
   top: 244px;
 }
 #circleLCM {
   border-radius: 25%;
   width: 8vw;
+  cursor: pointer;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  right: 570px;
+  right: 530px;
   top: 442px;
 }
 #circleLF-ST {
   border-radius: 25%;
   width: 8vw;
+  cursor: pointer;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  right: 280px;
+  right: 240px;
   top: 432px;
 
 }
 #circleRF-ST {
   border-radius: 25%;
   width: 8vw;
+  cursor: pointer;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  right: 280px;
+  right: 240px;
   top: 252px;
 }
 #circleGK {
   border-radius: 25%;
   width: 8vw;
+  cursor: pointer;
   height: 8vh;
   background-color: #B7B7B7;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  right: 890px;
+  right: 850px;
   top: 342px;
   z-index: 999;
 }
@@ -183,7 +194,7 @@ body {
   z-index: 1;
   margin: 50px auto;
   background-color: #539A46;
-  position: relative;
+  position: fixed;
   top: 70px
 }
 .container .line {

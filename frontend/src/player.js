@@ -1,14 +1,16 @@
 class Player {
-    constructor(name, nat, pos, team_id, id) {
+    constructor(id, name, nat, pos, team_id) {
+        this.id = id
         this.name = name;
         this.nat = nat;
         this.pos = pos
         this.team_id = team_id
-        this.id = id
+       
+    
     }
     renderPlayer() {
         let playerDiv = document.getElementById(`circle${this.pos}`)
-        console.log(this.id)
+        
        
         playerDiv.innerHTML = 
         `
@@ -17,7 +19,7 @@ class Player {
         ${this.pos}</p>
        
         `
-        playerDiv.addEventListener("click",deletePlayer)
+        playerDiv.addEventListener("click", deletePlayer(this.id))
     }
     
 

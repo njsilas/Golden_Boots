@@ -104,7 +104,7 @@ function buildPlayerForm() {
         })
         .then(resp => resp.json())
         .then(player => {
-            let p = new Player(player.name, player.nat, player.pos, player.team_id)
+            let p = new Player(player.id, player.name, player.nat, player.pos, player.team_id)
            p.renderPlayer();
     })
     }
@@ -125,25 +125,26 @@ function buildPlayerForm() {
     .then(resp => resp.json())
     .then(players => {
         for (const player of players){
-             
-                let p = new Player(player.name, player.pos, player.nat, player.id)
-            
+                
+                let p = new Player(player.id, player.name, player.pos, player.nat)
+            console.log(p)
                 p.renderPlayer();
         }
     
      })
     }
-    function deletePlayer(){
-
-        let playerId = parseInt(event.target.dataset.id)
-        console.log(playerId)
+    function deletePlayer(plid){
+        console.log(plid)
+        let playerId = plid
+        //= parseInt(event.target.dataset.id)
+       
         if (window.confirm("Are you sure you want to delete them?")) {
             fetch(`${BASE_URL}/players/${playerId}`, {
-                method: 'DELETE'
-             
+                method: 'DELETE',
+               
             })
         
-           console.log(this.location) 
+           
         } 
         }
    
