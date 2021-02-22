@@ -26,5 +26,7 @@ class Team {
     `
    <option value="${this.id}" data-id="${this.id}">${this.name}</option>
     `
+   
+
    }
 }

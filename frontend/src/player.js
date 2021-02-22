@@ -8,7 +8,7 @@ class Player {
         this.nat = nat;
         this.pos = pos
         this.team_id = team_id
-       Team.all.push(this)
+       Player.all.push(this)
     
     }
     renderPlayer() {

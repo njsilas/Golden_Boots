@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () =>{
   buildTeamPrompt()
  fetchTeams(); 
  buildPlayerForm();
+ eventOnLoad();
 })
 const BASE_URL = "http://127.0.0.1:3000"
 let currentTeamId;
@@ -19,7 +20,7 @@ function buildPlayerForm() {
      playersForm.innerHTML +=  
         `
         <div class="top">
-        <h1 id= "teamname"> name goes here </h1>
+        <h1 id= "teamname"> Golden Boots </h1>
         <form id="pform" >
           <input type="name" id="pname" name="name" placeholder="Name" value="">
           <select name="pos" id="ppos">
@@ -158,14 +159,15 @@ function buildPlayerForm() {
         
         } 
         }
-   
-    function getAllPlayerByTeam() {
-       
-        fetch(` ${BASE_URL}/teams`)
-        .then(resp => resp.json())
-        .then(teams => { 
-           let t = teams[0]
-           t.renderLastTeam();
-      })
-
+   function eventOnLoad() {
+    let teamSelect = document.getElementById("teams")
+    teamSelect.addEventListener('change', (e) => {
+       debugger
+        console.log(`e.target.value = ${ e.target.value }`);
+        console.log(`teamSelect.options[teamSelect.selectedIndex].value = ${ teamSelect.options[teamSelect.selectedIndex].value }`);
+      });
+   }
+    function getAllPlayersByTeam() {
+       console.log(this)
+        debugger
     } 
