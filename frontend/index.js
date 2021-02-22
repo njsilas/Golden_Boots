@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () =>{
  fetchTeams(); 
  buildPlayerForm();
  eventOnLoad();
+ fetchPlayers ();
 })
 const BASE_URL = "http://127.0.0.1:3000"
 let currentTeamId;
@@ -132,9 +133,8 @@ function buildPlayerForm() {
     .then(players => {
         for (const player of players){
                 
-                let p = new Player(player.id, player.name, player.pos, player.nat)
+            let p = new Player(player.id, player.name, player.nat, player.pos, player.team_id)
             
-                p.renderPlayer();
         }
     
      })
@@ -162,12 +162,20 @@ function buildPlayerForm() {
    function eventOnLoad() {
     let teamSelect = document.getElementById("teams")
     teamSelect.addEventListener('change', (e) => {
-       debugger
-        console.log(`e.target.value = ${ e.target.value }`);
-        console.log(`teamSelect.options[teamSelect.selectedIndex].value = ${ teamSelect.options[teamSelect.selectedIndex].value }`);
+       getAllPlayersByTeam(e.target.value)
+        
       });
    }
-    function getAllPlayersByTeam() {
-       console.log(this)
-        debugger
+    function getAllPlayersByTeam(teamById) {
+      // let playersRequested = Player.all.forEach(player => player.team_id == teamById)
+            for(player of Player.all) {
+                if (player.team_id == currentTeamId){
+                    player.renderPlayer()
+                }
+                else if (player.team_id == teamById){
+                    player.guestRenderPlayer()
+                }
+            }
+     
+       
     } 
