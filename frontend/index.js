@@ -170,12 +170,9 @@ function buildPlayerForm() {
    }
     function getAllPlayersByTeam(teamById) {
       // let playersRequested = Player.all.forEach(player => player.team_id == teamById)
-                for(position of positions) {
-                    let wipe = document.getElementById(`circle${position}`)
-                    wipe.innerHTML = `${position}`
-                }
+                squadWipe()
                 for(player of Player.all) {
-                if (player.team_id == currentTeamId){
+                if (player.team_id == currentTeamId && player.team_id == teamById){
                     player.renderPlayer()
                 }
                 else if (player.team_id == teamById){
@@ -185,3 +182,9 @@ function buildPlayerForm() {
      
        
     } 
+    function squadWipe(){
+        for(position of positions) {
+            let wipe = document.getElementById(`circle${position}`)
+            wipe.innerText= `${position}`
+        }
+    }
