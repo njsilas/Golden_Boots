@@ -27,6 +27,21 @@ class Player {
          playerDiv.addEventListener("click", deletePlayer)
         
     }
+    guestRenderPlayer() {
+        let playerDiv = document.getElementById(`circle${this.pos}`)
+       
+        console.log(playerDiv)
+         playerDiv.innerHTML = 
+         `
+      
+         
+        <p class="ptxt" data-id="${this.id}">${this.name}<br>
+         ${this.nat}<br>
+         ${this.pos}</p>
+        
+         `
+          playerDiv.removeEventListener("click", deletePlayer)
+    }
       
     // add form to page
     
