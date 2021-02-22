@@ -1,7 +1,9 @@
 class Team {
+    static all = []
     constructor(name, id) {
         this.name = name;
         this.id = id
+        
     }
     // render team instance method
     renderTeam() {
@@ -17,7 +19,12 @@ class Team {
     // add data about team
   
     //allow chaning of teams to seeded data
-    renderLastTeam() {
-        return this.id
-    }
+   renderDisplayAll() {
+    let teamSelect = document.getElementById("teams")
+    
+    teamSelect.innerHTML += 
+    `
+   <option value="${this.id}" data-id="${this.id}">${this.name}</option>
+    `
+   }
 }

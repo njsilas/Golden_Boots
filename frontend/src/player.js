@@ -1,11 +1,14 @@
 class Player {
+    
+    static all = []
+    
     constructor(id, name, nat, pos, team_id) {
         this.id = id
         this.name = name;
         this.nat = nat;
         this.pos = pos
         this.team_id = team_id
-       
+       Team.all.push(this)
     
     }
     renderPlayer() {

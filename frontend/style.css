@@ -1,11 +1,54 @@
+html { 
+  background-color: #add8e6 ;
 
-
+}
+.testbg {
+  background: url("img/potentialbackground.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: right 22% top 0%;
+  height: 50%;
+}
 body {
-  background-color: #fff;
+
   
+}
+.footer {
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height: 40px;
+  background-color: #D0DAEE;
+  text-align: center;
+  opacity: 0;
+}
+.title {
+  font-family: Impact, fantasy ;
+  text-align: center;
+  color: #DAA520;
+  font-weight: 400;
+  font-size: 22px;
+  font-stretch: expanded;
+  opacity: none;
 }
 .dropdown {
   position: sticky;
+  
+}
+.bg {
+   /* The image used */
+   background-image: url("img/potentialbackground.jpg");
+
+   /* Full height */
+   height: 140%;
+ 
+   /* Center and scale the image nicely */
+   background-position: right 22% bottom 45%;
+   background-repeat: no-repeat;
+   background-size: contain;
 }
 .ptxt {
   text-align: center;
@@ -21,6 +64,7 @@ body {
 }
 #circleRB {
   border-radius: 25%;
+  border-style: solid;
   border-color: #DAA520;
   cursor: pointer;
   width: 8vw;
@@ -36,6 +80,8 @@ body {
 #circleLB {
   border-radius: 25%;
   width: 8vw;
+  border-style: solid;
+  border-color: #DAA520;
   cursor: pointer;
   height: 8vh;
   background-color: #B7B7B7;
@@ -48,6 +94,8 @@ body {
 }
 #circleRCB {
   border-radius: 25%;
+  border-style: solid;
+  border-color: #DAA520;
   width: 8vw;
   cursor: pointer;
   height: 8vh;
@@ -61,6 +109,8 @@ body {
 }
 #circleLCB{
   border-radius: 25%;
+  border-style: solid;
+  border-color: #DAA520;
   width: 8vw;
   cursor: pointer;
   height: 8vh;
@@ -70,13 +120,15 @@ body {
   justify-content: space-around;
   position: absolute;
   right: 640px;
-  top: 150px;
+  top: 142px;
 }
 .placementform{
   position: fixed;
 }
 #circleLM-LW {
   border-radius: 25%;
+  border-style: solid;
+  border-color: #DAA520;
   width: 8vw;
   cursor: pointer;
   height: 8vh;
@@ -90,6 +142,8 @@ body {
 }
 #circleRM-RW{
   border-radius: 25%;
+  border-style: solid;
+  border-color: #DAA520;
   width: 8vw;
   cursor: pointer;
   height: 8vh;
@@ -103,6 +157,8 @@ body {
 }
 #circleRCM {
   border-radius: 25%;
+  border-style: solid;
+  border-color: #DAA520;
   width: 8vw;
   cursor: pointer;
   height: 8vh;
@@ -112,10 +168,12 @@ body {
   justify-content: space-around;
   position: absolute;
   right: 455px;
-  top: 350px;
+  top: 340px;
 }
 #circleLCM {
   border-radius: 25%;
+  border-style: solid;
+  border-color: #DAA520;
   width: 8vw;
   cursor: pointer;
   height: 8vh;
@@ -129,6 +187,8 @@ body {
 }
 #circleLF-ST {
   border-radius: 25%;
+  border-style: solid;
+  border-color: #DAA520;
   width: 8vw;
   cursor: pointer;
   height: 8vh;
@@ -143,6 +203,8 @@ body {
 }
 #circleRF-ST {
   border-radius: 25%;
+  border-style: solid;
+  border-color: #DAA520;
   width: 8vw;
   cursor: pointer;
   height: 8vh;
@@ -156,6 +218,8 @@ body {
 }
 #circleGK {
   border-radius: 25%;
+  border-style: solid;
+  border-color: #DAA520;
   width: 8vw;
   cursor: pointer;
   height: 8vh;
@@ -165,7 +229,7 @@ body {
   justify-content: space-around;
   position: absolute;
   right: 750px;
-  top: 242px;
+  top: 230px;
   z-index: 999;
 }
 #circle {

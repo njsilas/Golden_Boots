@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () =>{
   buildTeamPrompt()
-  buildPlayerForm()
+ fetchTeams(); 
+ buildPlayerForm();
 })
 const BASE_URL = "http://127.0.0.1:3000"
 let currentTeamId;
@@ -76,8 +77,9 @@ function buildPlayerForm() {
     .then(team => {
         let t = new Team(team.name, team.id)
        currentTeamId = t.id
-        t.renderTeam()
-        
+       Team.all.push(t)
+       t.renderTeam()
+        t.renderDisplayAll()
 
 })
 
@@ -114,11 +116,14 @@ function buildPlayerForm() {
     .then(teams => {
         for (const team of teams){
             
-            let t = new Team(team.id, team.name)
-           t.renderTeam();
+            let t = new Team(team.name, team.id)
+           Team.all.push(t)
+            t.renderDisplayAll();
+           
         }
-
+       
      })
+    
    }
     function fetchPlayers (){
     fetch(` ${BASE_URL}/players`)
@@ -148,12 +153,13 @@ function buildPlayerForm() {
         
             
             this.removeEventListener("click", deletePlayer)
-            this.innerHTML = ``
+           
+            this.innerHTML = `${this.getAttribute("name")}`
         
         } 
         }
    
-    function getlastTeam() {
+    function getAllPlayerByTeam() {
        
         fetch(` ${BASE_URL}/teams`)
         .then(resp => resp.json())
