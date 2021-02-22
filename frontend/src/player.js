@@ -30,7 +30,7 @@ class Player {
     guestRenderPlayer() {
         let playerDiv = document.getElementById(`circle${this.pos}`)
        
-        console.log(playerDiv)
+    
          playerDiv.innerHTML = 
          `
       

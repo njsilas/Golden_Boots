@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () =>{
  fetchPlayers ();
 })
 const BASE_URL = "http://127.0.0.1:3000"
+const positions = ["GK", "RB", "LB", "RCB", "LCB", "RM-RW", "LM-LW", "LCM", "RCM", "LF-ST", "RF-ST"]
+
 let currentTeamId;
 
 function buildTeamPrompt () {
@@ -168,7 +170,11 @@ function buildPlayerForm() {
    }
     function getAllPlayersByTeam(teamById) {
       // let playersRequested = Player.all.forEach(player => player.team_id == teamById)
-            for(player of Player.all) {
+                for(position of positions) {
+                    let wipe = document.getElementById(`circle${position}`)
+                    wipe.innerHTML = `${position}`
+                }
+                for(player of Player.all) {
                 if (player.team_id == currentTeamId){
                     player.renderPlayer()
                 }
