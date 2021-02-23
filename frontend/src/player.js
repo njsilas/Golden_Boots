@@ -17,14 +17,12 @@ class Player {
        console.log(playerDiv)
         playerDiv.innerHTML = 
         `
-     
-        
        <p class="ptxt" data-id="${this.id}">${this.name}<br>
         ${this.nat}<br>
         ${this.pos}</p>
-       
         `
-         playerDiv.addEventListener("click", deletePlayer)
+         
+        playerDiv.addEventListener("click", deletePlayer)
         
     }
     guestRenderPlayer() {

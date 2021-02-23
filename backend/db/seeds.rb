@@ -5,10 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-#Team.create([{name: "Flying Dutchmen", id: 3}, {name: "Dutch National Team", id:4}, {name: "1998 TOTY", id: 5}])
+Team.create([{name: "Flying Dutchmen"}, {name: "Dutch National Team"}, {name: "1998 TOTY"}, {name: "Andy Carrol's top 11"}, {name: "BienSports picks"}, {name: "SkySports picks"}])
 
 #Player.create(team_id: 4, name: "Robert Van Percy", pos: "ST", nat: "Dutch")
-Player.Create([{team_id: 1, name: "Yashin", pos: "GK", nat:"RUS"}, {team_id: 1, name: "Lahm", pos: "RB", nat: "GER"}, {team_id: 1, name: "Beckenbauer", pos: "RCB", nat: "GER"}, {team_id: 1, name: "Maldini", pos: "LCB", nat: "ITA"}, 
+Player.create([{team_id: 1, name: "Yashin", pos: "GK", nat:"RUS"}, {team_id: 1, name: "Lahm", pos: "RB", nat: "GER"}, {team_id: 1, name: "Beckenbauer", pos: "RCB", nat: "GER"}, {team_id: 1, name: "Maldini", pos: "LCB", nat: "ITA"}, 
     {team_id: 1, name: "Carlos", pos: "LB", nat: "BRA"}, {team_id: 1, name: "Iniesta", pos: "LM-LW", nat: "ESP"}, {team_id: 1, name: "Matthaus", pos: "LCM", nat: "GER"}, {team_id: 1, name: "Zidane", pos: "RCM", nat: "FRA"}, 
     {team_id: 2, name: "Buffon", pos: "GK", nat: "ITA"}, {team_id: 2, name: "Cafu", pos: "RB", nat: "BRA"}, {team_id: 2, name: "Puyol", pos: "RCB", nat: "ESP"}, 
     {team_id: 2, name: "Pepe", pos: "LCB", nat: "POR"}, {team_id: 2, name: "Carlos", pos: "LB", nat: "BRA"}, {team_id: 2, name: "Iniesta", pos: "LM-LW", nat: "ESP"}, {team_id: 2, name: "Pirlo", pos: "LCM", nat: "ITA"}, 
