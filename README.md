@@ -9,7 +9,7 @@ data for your next upcoming trip.
 Clone the repository at https://github.com/njsilas/golden_boots.
 Once you have finished that. Run bundle install within the backend directory,
 then run rails db:migrate and rails db:seed. After this step, open frontend in 
-your console and type in open nutest.html.
+your console and type in open index.html.
 
 ## Usage
 This application was designed for you to input your top starting 11 soccer players
