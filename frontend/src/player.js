@@ -9,8 +9,16 @@ class Player {
         this.pos = pos
         this.team_id = team_id
        Player.all.push(this)
-    
+       Object.defineProperty(this, "uninat", {
+        get() {
+            
+            let firstThree = this.nat.slice(0, 3)
+            return firstThree
+     }
+   });
     }
+
+  
     renderPlayer() {
         let playerDiv = document.getElementById(`circle${this.pos}`)
        
@@ -18,7 +26,7 @@ class Player {
         playerDiv.innerHTML = 
         `
        <p class="ptxt" data-id="${this.id}">${this.name}<br>
-        ${this.nat}<br>
+        ${this.uninat}<br>
         ${this.pos}</p>
         `
          
@@ -31,16 +39,14 @@ class Player {
     
          playerDiv.innerHTML = 
          `
-      
-         
         <p class="ptxt" data-id="${this.id}">${this.name}<br>
-         ${this.nat}<br>
+         ${this.uninat}<br>
          ${this.pos}</p>
         
          `
           playerDiv.removeEventListener("click", deletePlayer)
     }
-      
+   
     // add form to page
     
     // send player data to database

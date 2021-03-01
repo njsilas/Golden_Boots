@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () =>{
-  buildTeamPrompt()
+ buildTeamPrompt()
  fetchTeams(); 
  buildPlayerForm();
  eventOnLoad();
@@ -144,9 +144,6 @@ function buildPlayerForm() {
     function deletePlayer(event){
         
         let playerId = parseInt(event.target.dataset.id)
-        //= parseInt(event.target.dataset.id)
-    
-
        
         if (window.confirm("Are you sure you want to delete them?")) {
             fetch(`${BASE_URL}/players/${playerId}`, {
@@ -154,7 +151,6 @@ function buildPlayerForm() {
                
             })
         
-            
             this.removeEventListener("click", deletePlayer)
            
             this.innerHTML = `${this.getAttribute("name")}`
@@ -169,7 +165,7 @@ function buildPlayerForm() {
       });
    }
     function getAllPlayersByTeam(teamById) {
-      // let playersRequested = Player.all.forEach(player => player.team_id == teamById)
+    
                 squadWipe()
                 for(player of Player.all) {
                 if (player.team_id == currentTeamId && player.team_id == teamById){
