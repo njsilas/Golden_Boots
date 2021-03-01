@@ -29,23 +29,15 @@ class Player {
         ${this.uninat}<br>
         ${this.pos}</p>
         `
-         
-        playerDiv.addEventListener("click", deletePlayer)
+         if (currentTeamId == this.team_id) {
+            playerDiv.addEventListener("click", deletePlayer)
+         }
+         else {
+            playerDiv.removeEventListener("click", deletePlayer)
+         }
         
     }
-    guestRenderPlayer() {
-        let playerDiv = document.getElementById(`circle${this.pos}`)
-       
-    
-         playerDiv.innerHTML = 
-         `
-        <p class="ptxt" data-id="${this.id}">${this.name}<br>
-         ${this.uninat}<br>
-         ${this.pos}</p>
-        
-         `
-          playerDiv.removeEventListener("click", deletePlayer)
-    }
+   
    
     // add form to page
     

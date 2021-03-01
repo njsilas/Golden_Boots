@@ -172,7 +172,7 @@ function buildPlayerForm() {
                     player.renderPlayer()
                 }
                 else if (player.team_id == teamById){
-                    player.guestRenderPlayer()
+                    player.renderPlayer()
                 }
             }
      
