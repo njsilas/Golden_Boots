@@ -13,7 +13,7 @@ class Player {
         get() {
             
             let firstThree = this.nat.slice(0, 3)
-            return firstThree
+            return firstThree.toUpperCase()
      }
    });
     }
